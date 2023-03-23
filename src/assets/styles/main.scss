@@ -1,0 +1,64 @@
+// RESET //
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+// VARIABLES //
+
+// Colors
+
+$component-red: hsl(0, 100%, 67%);
+$component-yellow:hsl(39, 100%, 56%);
+$component-green: hsl(166, 100%, 37%);
+$component-blue: hsl(234, 85%, 45%);
+
+$circle-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+$background-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-pale-blue: hsl(221, 100%, 96%);
+$neutral-light-lavender: hsl(241, 100%, 89%);
+$neutral-dark-blue: hsl(224, 30%, 27%);
+
+// Fonts
+
+@font-face {
+    font-family: Hanken;
+    src: url(../fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+$font-size-200: 1.125rem;
+$font-size-300: 1.25rem;
+$font-size-400: 1.5rem;
+$font-size-500: 1.75rem;
+$font-size-900: 5rem;
+
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+body {
+    font-family: Hanken;
+}
