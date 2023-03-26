@@ -34,6 +34,7 @@ import { ref } from 'vue';
         align-items: center;    
         margin-block: 1rem;
         padding: 1rem; 
+        border-radius: 0.5rem;
 
         &__heading {
             display: flex;
