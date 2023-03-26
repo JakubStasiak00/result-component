@@ -5,7 +5,7 @@
                 Your Result
             </h1>
             <p class="result__score">
-                <span class="result__points"> {{ score }} </span>
+                <span class="result__points"> {{ score }} </span><br>
                 of 100
             </p>
             <p class="result__message">
@@ -42,22 +42,26 @@ const dataArray = [
 {
     category: "Reaction",
     score: 80,
-    icon: IconReaction
+    icon: IconReaction,
+    color: 'red' //['0', '100%', '67%']
   },
   {
     category: "Memory",
     score: 92,
-    icon: IconMemory
+    icon: IconMemory,
+    color: 'yellow'  //['39', '100%', '56%']
   },
   {
     category: "Verbal",
     score: 61,
-    icon: IconVerbal
+    icon: IconVerbal,
+    color: 'green'  //['166', '100%', '37%']
   },
   {
     category: "Visual",
     score: 72,
-    icon: IconVisual
+    icon: IconVisual,
+    color: 'blue'  //['234', '85%', '45%']
   }
 ]
 
@@ -71,18 +75,106 @@ const score = ref(76)
     @import "./assets/styles/main.scss";
 
     main {
-        max-width: 650px;
+        max-width: 638px;
         margin: 0 auto; 
+        box-shadow: .5rem 1rem 2rem rgba(43, 51, 163, 0.185);
+        min-height: 100vh;
+
+        & > * {
+            padding: 1rem;
+        }
     }
 
     .result {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: $background-gradient;
+        color: hsla(0, 0%, 100%, 0.85);
+        align-items: center;
+        gap: 2rem;
+        border-radius: 0 0 2rem 2rem;
+        padding-block: 2rem 3rem;
+
+        &__score {
+            background: $circle-gradient;
+            aspect-ratio: 1/1;
+            width: max-content;
+            border-radius: 1000vw;
+            padding: 1.5rem;
+        }
+
+        &__points {
+            font-size: $font-size-900;
+            font-weight: $font-weight-bold;
+        }
+
+        &__points, &__grade {
+            color: white;
+        }
+
+        &__message {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &__grade {
+            font-size: $font-size-400;
+        }
+
+        &__description {
+            font-size: $font-size-100;
+            max-width: 70%;
+            margin: 0 auto;
+        }
     }
 
-    @media screen and (min-width: 768px) {
+    .summary {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-block: 2rem 2rem;
+
+        &__title {
+            font-weight: $font-weight-black;
+            letter-spacing: 0.03rem;
+            color: $neutral-dark-blue;
+            font-size: $font-size-300;
+        }
+
+        &__continue {
+            border: none;
+            background-color: $neutral-dark-blue;
+            color: $neutral-pale-blue;
+            border-radius: 100vw;
+            padding-block: 1rem;
+
+            &:active, &:hover {
+                background: $background-gradient;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media screen and (min-width: 628px) {
+        #app {
+            display: grid;
+            place-items: center;
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+
         main {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            border-radius: 2rem;
+            min-height: 0;
+        }
+
+        .result {
+            border-radius: 2rem;
         }
     }
 

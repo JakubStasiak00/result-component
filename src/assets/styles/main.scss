@@ -2,7 +2,10 @@
 
 html {
     box-sizing: border-box;
-    font-size: 16px;
+    & * {
+      font-size: 16px;
+      //outline: 1px solid red;
+    }
   }
   
   *, *:before, *:after {
@@ -30,12 +33,12 @@ html {
 // Colors
 
 $component-red: hsl(0, 100%, 67%);
-$component-yellow:hsl(39, 100%, 56%);
+$component-yellow: hsl(39, 100%, 56%);
 $component-green: hsl(166, 100%, 37%);
 $component-blue: hsl(234, 85%, 45%);
 
-$circle-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-$background-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+$circle-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+$background-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 
 $neutral-white: hsl(0, 0%, 100%);
 $neutral-pale-blue: hsl(221, 100%, 96%);
@@ -49,11 +52,11 @@ $neutral-dark-blue: hsl(224, 30%, 27%);
     src: url(../fonts/HankenGrotesk-VariableFont_wght.ttf);
 }
 
-$font-size-200: 1.125rem;
-$font-size-300: 1.25rem;
+$font-size-100: 0.9rem;
+$font-size-300: 1.15rem;
 $font-size-400: 1.5rem;
 $font-size-500: 1.75rem;
-$font-size-900: 5rem;
+$font-size-900: 4rem;
 
 $font-weight-normal: 500;
 $font-weight-bold: 700;
